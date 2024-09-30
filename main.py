@@ -13,7 +13,7 @@ CHANNEL_ID = ADD_YOUR_CHANNEL_ID_HERE
 SELF_MUTE = True
 SELF_DEAF = False
 
-usertoken = os.getenv("TOKEN")
+usertoken = os.getenv("MTE0ODYwOTY2MjIxNjgzMTAwNg.GkJ7oN.Ouqm_jmyAUnB9H7RmIulqmvprfbzA_P4cx0PbM")
 if not usertoken:
   print("[ERROR] Please add a token inside Secrets.")
   sys.exit()
@@ -35,8 +35,8 @@ def joiner(token, status):
     ws.connect('wss://gateway.discord.gg/?v=9&encoding=json')
     start = json.loads(ws.recv())
     heartbeat = start['d']['heartbeat_interval']
-    auth = {"op": 2,"d": {"token": token,"properties": {"$os": "Windows 10","$browser": "Google Chrome","$device": "Windows"},"presence": {"status": status,"afk": False}},"s": None,"t": None}
-    vc = {"op": 4,"d": {"guild_id": GUILD_ID,"channel_id": CHANNEL_ID,"self_mute": SELF_MUTE,"self_deaf": SELF_DEAF}}
+    auth = {"op": 2,"d": {"token": token,"properties": {"$os": "Windows 10","$browser": "Google Chrome","$device": "Windows"},"presence": {"status": status,"THE BEST SERVER WITCHER": False}},"s": None,"t": None}
+    vc = {"op": 4,"d": {"1288578660550574211": GUILD_ID,"channel_id": 1288598249443299358,"self_mute": SELF_MUTE,"self_deaf": SELF_DEAF}}
     ws.send(json.dumps(auth))
     ws.send(json.dumps(vc))
     time.sleep(heartbeat / 1000)
