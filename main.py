@@ -36,9 +36,9 @@ def joiner(token, status):
     start = json.loads(ws.recv())
     heartbeat = start['d']['heartbeat_interval']
     auth = {"op": 2,"d": {"token": token,"properties": {"$os": "Windows 10","$browser": "Google Chrome","$device": "Windows"},"presence": {"status": status,"THE BEST SERVER WITCHER": False}},"s": None,"t": None}
-    vc = {"op": 4,"d": {"1288578660550574211": GUILD_ID,"channel_id": 1288598249443299358,"self_mute": SELF_MUTE,"self_deaf": SELF_DEAF}}
+    vc = {"op": 4,"d": {"1265747635994624131": GUILD_ID,"channel_id": 1288578660550574211,"self_mute": SELF_MUTE,"self_deaf": SELF_DEAF}}
     ws.send(json.dumps(auth))
-    ws.send(json.dumps(vc))
+    ws.send(json.dumps(vc)) 
     time.sleep(heartbeat / 1000)
     ws.send(json.dumps({"op": 1,"d": None}))
 
